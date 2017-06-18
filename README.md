@@ -5,24 +5,24 @@ A 2D RPG Game/Engine Written in Java. Theme is Wizards and magic.
 
 # GUI -
 
-*Swing vs. JavaFX            - leaning towards Swing
+* Swing vs. JavaFX            - leaning towards Swing
 
-*Inventory for entities
+* Inventory for entities
 
-*Player
+* Player
 
 # Sprite Design
 
-*GIMP and PAINT.NET
+* GIMP and PAINT.NET
 
-*backgrounds eventually       - Probably done in Photoshop
+* backgrounds eventually       - Probably done in Photoshop
 
 # Gameplay
 
-*Interesting Spell Selection
+* Interesting Spell Selection
 
-*Variety of monsters and bosses
+* Variety of monsters and bosses
 
-*Several levels
+* Several levels
 
-*Item pick up                 - item ideas such as weapons, potions, food.
+* Item pick up                 - item ideas such as weapons, potions, food.
