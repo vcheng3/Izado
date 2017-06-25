@@ -1,3 +1,8 @@
+import java.awt.Graphics;
+import java.awt.image.BufferStrategy;
+
+import Entity.Player;
+
 public class Game implements Runnable {
 	
 	private Thread thread;
@@ -6,6 +11,8 @@ public class Game implements Runnable {
 	private Display display;
 	public String title;
 	public int width, height;
+	
+	private Player player;
 	
 	public Game(String title, int width, int height){
 		this.title = title;
@@ -16,6 +23,7 @@ public class Game implements Runnable {
 	private void init(){
 		
 	display = new Display(title,width,height);
+	player = new Player(50, 50);
 	}
 	
 	private void update(){
@@ -23,13 +31,26 @@ public class Game implements Runnable {
 	}
 	
 	private void render(){
+		BufferStrategy bs = display.getCanvas().getBufferStrategy();
+		if(bs == null){
+			display.getCanvas().createBufferStrategy(3);
+			return;
+		}
 		
+		Graphics g = bs.getDrawGraphics();
+		
+		player.render(g);
+	
+		bs.show();
+		g.dispose();
 	}
-
+	//automatically called.
 	@Override
 	public void run() {
 		init();
 		while(running){
+			update();
+			render();
 			
 		}
 		

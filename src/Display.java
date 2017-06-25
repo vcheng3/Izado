@@ -27,10 +27,12 @@ public Display(String title, int height, int width){
 	canvas.setPreferredSize(new Dimension(width,height));
 	canvas.setMaximumSize(new Dimension(width,height));
 	canvas.setMinimumSize(new Dimension(width,height));
-	canvas.setBackground(Color.GRAY);
+	canvas.setBackground(Color.BLACK);
 	frame.add(canvas);
 	frame.pack();
 
 }
-
+public Canvas getCanvas(){
+	return this.canvas;
+}
 }
