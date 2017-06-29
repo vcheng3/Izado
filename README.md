@@ -30,8 +30,4 @@ A 2D RPG Game/Engine Written in Java. Theme is Wizards and magic.
 
 # Recent Updates
 
-* I'll need to do something about the resize issue in the future. If I add a camera class and allow resizable screen, that will be problematic when I try to center on character
-
-* Still unsure what approach to take for world creation.
-
-* Projectiles may have to be 4 way directional. 
+* Movement, still has some bugs. Collision detection will need to be redefined.
