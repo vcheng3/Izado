@@ -7,7 +7,7 @@ A 2D RPG Game/Engine Written in Java. Theme is Wizards and magic.
 * Movement
 * Entities
 
-# Upcoming
+# Upcoming -
 
 * Collision Detection
 * TileMaps, levels
