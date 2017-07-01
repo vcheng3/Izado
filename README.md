@@ -26,3 +26,8 @@ A 2D RPG Game/Engine Written in Java. Theme is Wizards and magic.
 * Several levels
 
 * Item pick up                 - item ideas such as weapons, potions, food.
+
+
+# Recent Updates
+
+* Movement, still has some bugs. Collision detection will need to be redefined.
