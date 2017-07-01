@@ -1,33 +1,15 @@
 # Izado
 A 2D RPG Game/Engine Written in Java. Theme is Wizards and magic.
 
-* Will probably use LibGDX and maybe Slick2d,
 
-# GUI -
+# Recently Done - 
 
-* Swing vs. JavaFX            - leaning towards Swing
+* Movement
+* Entities
 
-* Inventory for entities
+# Upcoming
 
-* Player
-
-# Sprite Design
-
-* GIMP and PAINT.NET
-
-* backgrounds eventually       - Probably done in Photoshop
-
-# Gameplay
-
-* Interesting Spell Selection
-
-* Variety of monsters and bosses
-
-* Several levels
-
-* Item pick up                 - item ideas such as weapons, potions, food.
-
-
-# Recent Updates
-
-* Movement, still has some bugs. Collision detection will need to be redefined.
+* Collision Detection
+* TileMaps, levels
+* health bar, exp, monsters
+* animations
