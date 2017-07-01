@@ -1,30 +1,43 @@
 package Entity;
 
 import java.awt.Graphics;
+import RPG.Game;
 import java.awt.image.BufferedImage;
 
 import Managers.ImageHandler;
 
 public class Player extends Entity {
 	
-	private BufferedImage wizard;
+	//private BufferedImage wizard;
+	private Game game;
 
-	public Player(int x, int y) {
+	public Player(Game game, int x, int y) {
 		super(x, y);
+		this.game = game;
 		
-		wizard = ImageHandler.loadImage("Sprites/WizardSprite.png");
 		
 	}
 
 	@Override
 	public void update() {
-	
+		if(game.getKeyInput().up){
+			yPos -= 1;
+		}
+		if(game.getKeyInput().down){
+			yPos += 1;
+		}
+		if(game.getKeyInput().left){
+			xPos -= 1;
+		}
+		if(game.getKeyInput().right){
+			xPos += 1;
+		}
 	}
 
 	@Override
 	public void render(Graphics g) {
 		
-		g.drawImage(wizard, xPos, yPos, null);
+		g.drawImage(game.wizard, xPos, yPos, null);
 		
 	}
 

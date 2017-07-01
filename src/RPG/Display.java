@@ -1,3 +1,4 @@
+package RPG;
 import javax.swing.JFrame;
 
 import java.awt.Canvas;
@@ -28,11 +29,16 @@ public Display(String title, int height, int width){
 	canvas.setMaximumSize(new Dimension(width,height));
 	canvas.setMinimumSize(new Dimension(width,height));
 	canvas.setBackground(Color.BLACK);
+	canvas.setFocusable(false);
+	
 	frame.add(canvas);
 	frame.pack();
 
 }
 public Canvas getCanvas(){
 	return this.canvas;
+}
+public JFrame getFrame(){
+	return frame;
 }
 }

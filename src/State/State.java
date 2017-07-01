@@ -2,11 +2,27 @@ package State;
 
 import java.awt.Graphics;
 
-public abstract class State {
+import RPG.Game;
 
-	public State(){
+
+public abstract class State {
+	
+	public Game game;
+	private static State currentState = null;
+
+	public State(Game game){
+		
+		this.game = game;
 		
 	}
+public static State getState(){
+	return currentState;
+	
+}
+
+public static void setState(State state){
+	currentState = state;
+}
 	
 public abstract void update();
 

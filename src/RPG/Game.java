@@ -1,7 +1,12 @@
+package RPG;
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
 
-import Entity.Player;
+import State.State;
+import State.GameState;
+import Input.KeyInput;
+import Managers.ImageHandler;
 
 public class Game implements Runnable {
 	
@@ -12,25 +17,34 @@ public class Game implements Runnable {
 	public String title;
 	public int width, height;
 	
-	private Player player;
+	public KeyInput keyInput;
+	private State gameState;
+	public BufferedImage wizard;
 	
 	public Game(String title, int width, int height){
 		this.title = title;
 		this.width = width;
 		this.height = height;
-		
+		keyInput = new KeyInput();
 	}
 	private void init(){
 		
 	display = new Display(title,width,height);
-	player = new Player(50, 50);
+	display.getFrame().addKeyListener(keyInput);
+	wizard = ImageHandler.loadImage("Sprites/WizardSprite.png");
+	gameState = new GameState(this);
+	State.setState(gameState);
 	}
 	
 	private void update(){
-		
+		keyInput.update();
+		//gameState.update();
+		wizard = ImageHandler.loadImage("Sprites/WizardSprite.png");
+		if(State.getState() != null)
+			State.getState().update();
 	}
 	
-	private void render(){
+	private void render(){	
 		BufferStrategy bs = display.getCanvas().getBufferStrategy();
 		if(bs == null){
 			display.getCanvas().createBufferStrategy(3);
@@ -38,8 +52,10 @@ public class Game implements Runnable {
 		}
 		
 		Graphics g = bs.getDrawGraphics();
-		
-		player.render(g);
+		g.clearRect(0, 0, width, height);
+		//clear screen
+		if(State.getState() != null)
+			State.getState().render(g);
 	
 		bs.show();
 		g.dispose();
@@ -71,6 +87,9 @@ public class Game implements Runnable {
 			e.printStackTrace();
 		}
 		
+	}
+	public KeyInput getKeyInput(){
+		return keyInput;
 	}
 
 }
