@@ -16,6 +16,7 @@ public class GameState extends State {
 	public GameState(Game game){
 		super(game);
 		player = new Player(game, 100, 100);
+		newLevel = new Level();
 	}
 	
 	@Override
@@ -26,7 +27,7 @@ public class GameState extends State {
 	@Override
 	public void render(Graphics g) {
 		player.render(g);
-		//render level
+		newLevel.render(g);
 	}
 
 }

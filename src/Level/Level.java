@@ -12,17 +12,22 @@ public class Level {
 	
 	Tile tile;
 
-	public Level(){
-		
-		
+	public Level(){		
 		
 	}	
+	//terrain probably will remain static so this wont be needed.
+	public void update(){
+		
+	}
 	public void render(Graphics g){
 		for(int y = 0;y < height;y++){
 			for(int x = 0;x < width;x++){
-			//render the tiles.
+			getTile().render(g, x * 64, y * 64);
 			}
 		}
+	}
+	private Tile getTile() {
+		return Tile.grassTile;
 	}
 
 }
