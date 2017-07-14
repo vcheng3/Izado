@@ -15,12 +15,13 @@ public abstract class Tile {
 	
 	public Tile(BufferedImage bf,int tileID){
 		this.tileID = tileID;
-		Tile.setTile(tileType);
+	//	Tile.setTile(tileType);
+		this.tileType = bf;
 		tiles[tileID] = this;
 	}
 
 public void render(Graphics g, int x, int y){
-		g.drawImage(getTileImage(),x,y,64,64,null);
+		g.drawImage(tileType,x,y,64,64,null);
 }	
 
 public boolean isSolid(){

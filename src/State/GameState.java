@@ -21,13 +21,14 @@ public class GameState extends State {
 	
 	@Override
 	public void update() {
+		newLevel	.update();
 		player.update();
 	}
 
 	@Override
 	public void render(Graphics g) {
-		player.render(g);
 		newLevel.render(g);
+		player.render(g);
 	}
 
 }

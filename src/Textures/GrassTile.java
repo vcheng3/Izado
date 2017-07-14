@@ -14,7 +14,7 @@ public class GrassTile extends Tile{
 	}
 
 	public static BufferedImage getTileImage() {
-		return Tile.tileType = ImageHandler.loadImage("Sprites/grasstile.png");
+		BufferedImage bf;
+		return bf = ImageHandler.loadImage("Sprites/grasstile.png");
 	}
-
 }

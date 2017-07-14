@@ -8,7 +8,7 @@ import Textures.Tile;
 public class Level {
 	
 	private int[][] tiles;
-	int width,height;
+	int width = 100,height=100;
 	
 	Tile tile;
 
@@ -22,7 +22,7 @@ public class Level {
 	public void render(Graphics g){
 		for(int y = 0;y < height;y++){
 			for(int x = 0;x < width;x++){
-			getTile().render(g, x * 64, y * 64);
+				getTile().render(g, x * 64, y * 64);
 			}
 		}
 	}
