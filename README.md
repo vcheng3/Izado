@@ -1,5 +1,5 @@
 # Izado
-A 2D RPG Game/Engine Written in Java. Theme is Wizards and magic.
+A 2D RPG Game/Engine Written in Java. Based on the rpg, CIMA:The Enemy
 
 Sprites are ready: Created from
 http://gaurav.munjal.us/Universal-LPC-Spritesheet-Character-Generator/
