@@ -1,22 +1,9 @@
 # Izado
-A 2D RPG Game/Engine Written in Java. Theme is Wizards and magic.
+A 2D RPG Game/Engine Written in Java. Based on the rpg, CIMA:The Enemy
 
+Sprites are ready: Created from
+http://gaurav.munjal.us/Universal-LPC-Spritesheet-Character-Generator/
 
-# Recently Done - 
+under GNU License
 
-* Movement
-* Entities
-
-# Upcoming -
-
-* Collision Detection
-* TileMaps, levels
-* health bar, monsters
-* animations
-* also need a player cam and a sprite cam. 
-* maybe add an experience system
-* 32 x 32 pixel sprites.
-* projectile system
-* game menus
-* pause game? maybe.
-* teleportation mechanic
+![wizardsprites](https://user-images.githubusercontent.com/15842600/32360003-6b8f2f9a-c028-11e7-943d-ce88d1070698.png)
