@@ -6,7 +6,8 @@ import java.awt.image.BufferedImage;
 public abstract class Tile {
 	
 	private int tileID;
-	public static Tile[] tiles = new Tile[100];
+	public static Tile[] passable_tiles = new Tile[100];
+	public static Tile[] stone_tiles = new Tile[100];
 	
 	public static Tile grassTile = new GrassTile(0);
 	
@@ -17,7 +18,7 @@ public abstract class Tile {
 		this.tileID = tileID;
 	//	Tile.setTile(tileType);
 		this.tileType = bf;
-		tiles[tileID] = this;
+	//	passable_tiles[tileID] = this;
 	}
 
 public void render(Graphics g, int x, int y){

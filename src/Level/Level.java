@@ -20,6 +20,7 @@ public class Level {
 	public void update(){
 		
 	}
+	//update with actual designed map
 	public void render(Graphics g){
 		for(int y = 0;y < height;y++){
 			for(int x = 0;x < width;x++){

@@ -1,13 +1,13 @@
 package Textures;
 
 import java.awt.image.BufferedImage;
+
 import Managers.MapAssets;
 import Managers.ImageHandler;
 
-public class GrassTile extends Tile{
-	
+public class StoneTile extends Tile{
 
-	public GrassTile(int tileID) {
+	public StoneTile(int tileID) {
 		super(getTileImage(), tileID);
 	
 	
@@ -16,4 +16,9 @@ public class GrassTile extends Tile{
 	public static BufferedImage getTileImage() {
 		return Tile.tileType = ImageHandler.loadImage("Sprites/grasstile.png");
 	}
+	@Override
+	public boolean isSolid(){
+		return true;	
+	}
 }
+
