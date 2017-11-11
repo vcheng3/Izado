@@ -21,7 +21,7 @@ public class GameState extends State {
 	
 	@Override
 	public void update() {
-		newLevel	.update();
+		newLevel.update();
 		player.update();
 	}
 
